@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Kategori;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -13,7 +14,7 @@ return new class extends Migration
     {
         Schema::create('bukus', function (Blueprint $table) {
             $table->id();
-            $table->foreignIdFor(Kategori::class);
+            $table->foreignIdFor(Kategori::class,"kategori_id");
             $table->text('judul')->nullable();
             $table->string('penulis')->nullable();
             $table->string('penerbit')->nullable();
