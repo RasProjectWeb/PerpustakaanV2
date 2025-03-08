@@ -9,7 +9,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Buku extends Model
 {
-    use HasFactory, SoftDeletes;
+    use HasFactory, SoftDeletes; 
 
     protected $table='bukus';
     protected $primarykey='id';

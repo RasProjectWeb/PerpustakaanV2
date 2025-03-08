@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Pinjam;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -15,9 +16,9 @@ return new class extends Migration
             $table->id();
             $table->foreignIdFor(Pinjam::class);
             $table->date('tgl_kembali')->nullable();
-            $this->string('denda')->nullable();
+            $table->string('denda')->nullable();
             $table->timestamps();
-            $table-softDeletes();
+            $table->softDeletes();
         });
     }
 
